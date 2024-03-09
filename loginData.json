@@ -1,0 +1,42 @@
+[
+    {
+        "username": "johndoe",
+        "password": "P@ssw0rd123"
+    },
+    {
+        "username": "alice_smith",
+        "password": "SecurePass456"
+    },
+    {
+        "username": "mike_jones",
+        "password": "MySecretP@ss"
+    },
+    {
+        "username": "emily_williams",
+        "password": "9876StrongPw"
+    },
+    {
+        "username": "david_brown",
+        "password": "BrownBear123!"
+    },
+    {
+        "username": "sarah_clark",
+        "password": "C0ffeeL0ver"
+    },
+    {
+        "username": "chris_miller",
+        "password": "MillerTime!23"
+    },
+    {
+        "username": "lisa_taylor",
+        "password": "Tayl0rMade#"
+    },
+    {
+        "username": "alex_jackson",
+        "password": "J@ckson567"
+    },
+    {
+        "username": "samantha_adams",
+        "password": "Ad@msPassw0rd"
+    }
+]
