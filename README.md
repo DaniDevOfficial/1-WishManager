@@ -19,6 +19,12 @@ Create a basic task manager application using PHP, HTML, CSS, and optionally Jav
 - HTML/CSS: Frontend markup and styling for the user interface.
 - JavaScript (optional): Add interactivity and dynamic behavior to the frontend.
 
+
+**How to use:**
+1. have php installed
+2. to start the app you need to run `php -S localhost:8000
+` 
+3. Open `localhost:8000` in your browser to see your app running
 **Steps to Implement:**
 1. Set up a local development environment with Apache, PHP, MySQL, and a text editor or IDE of your choice.
 2. Design the database schema for storing user accounts and tasks. Create tables for users and tasks with appropriate fields and relationships.

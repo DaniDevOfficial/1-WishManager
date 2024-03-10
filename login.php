@@ -5,14 +5,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // Now you have the username and password, you can proceed with authentication logic here
-    // For example, you could check the username and password against a database of users
+    // Check if the username and password are equal
+    if ($username === $password) {
+        echo "Login successful!";
+        // Display the welcome message if login is successful
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
 
-    // For demonstration purposes, let's just echo the username and password back
-    echo "Username: " . $username . "<br>";
-    echo "Password: " . $password . "<br>";
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+
+            <title>Logged in</title>
+        </head>
+
+        <body>
+            <h1>Welcome back
+                <?php echo $username; ?>!
+            </h1>
+        </body>
+
+        </html>
+        <?php
+    } else {
+        echo "Wrong username or password.";
+    }
 } else {
-    // If the form is not submitted via POST, display an error message
-    echo "Error: Form data not submitted.";
+    // Display the login form if the form is not submitted via POST
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <h1>Login now into your account (account creation currently not possible)</h1>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </body>
+
+    </html>
+    <?php
 }
 ?>
