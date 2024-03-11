@@ -1,11 +1,11 @@
 [
     {
-        "username": "johndoe",
-        "password": "P@ssw0rd123"
+        "username": "dani",
+        "password": "123"
     },
     {
-        "username": "alice_smith",
-        "password": "SecurePass456"
+        "username": "da",
+        "password": "$2y$10$B9x8d1syvWfj2D1VCWZMfuVK/DnM4UEIXU7T2gInkG7Iq4LA.TsWG"
     },
     {
         "username": "mike_jones",

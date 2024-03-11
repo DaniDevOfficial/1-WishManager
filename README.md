@@ -22,8 +22,7 @@ Create a basic task manager application using PHP, HTML, CSS, and optionally Jav
 
 **How to use:**
 1. have php installed
-2. to start the app you need to run `php -S localhost:8000
-` 
+2. to start the app you need to run `php -S localhost:8000` 
 3. Open `localhost:8000` in your browser to see your app running
 **Steps to Implement:**
 1. Set up a local development environment with Apache, PHP, MySQL, and a text editor or IDE of your choice.

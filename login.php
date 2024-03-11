@@ -7,14 +7,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+    $jsonData = file_get_contents('loginData.json');
+
+    // Decode the JSON data into a PHP array
+    $data = json_decode($jsonData, true);
+
+    // Check if the username exists in the JSON data
+    if(in_array($username, array_column($data, 'username'))){
+        $key = array_search($username, array_column($data, 'username'));
+        $passwordInDB = $data[$key]['password'];
+        // Hash the password
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        if (password_verify($password, $passwordInDB)) {
+            $_SESSION["username"] = $username;
+            header("Location: account.php");
+            exit;
+        } else {
+            echo "Invalid password";
+        }
+    }
+
+
     // Check if the username and password are equal
-    if ($username === $password) {
+    if ($username === "wasdasdasdfasdfasdf") {
         $_SESSION["username"] = $username;
         header("Location: account.php");
         
         exit;
     } else {
-        echo "Wrong username or password.";
         ?>
         <!DOCTYPE html>
         <html lang="en">
