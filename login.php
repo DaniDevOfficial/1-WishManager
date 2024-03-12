@@ -1,22 +1,17 @@
 <?php
 session_start();
 
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve the username and password from the POST data
     $username = $_POST["username"];
     $password = $_POST["password"];
-
+    
     $jsonData = file_get_contents('loginData.json');
 
-    // Decode the JSON data into a PHP array
     $data = json_decode($jsonData, true);
 
-    // Check if the username exists in the JSON data
-    if(in_array($username, array_column($data, 'username'))){
+    if (in_array($username, array_column($data, 'username'))) {
         $key = array_search($username, array_column($data, 'username'));
         $passwordInDB = $data[$key]['password'];
-        // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         if (password_verify($password, $passwordInDB)) {
             $_SESSION["username"] = $username;
@@ -28,11 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    // Check if the username and password are equal
     if ($username === "wasdasdasdfasdfasdf") {
         $_SESSION["username"] = $username;
         header("Location: account.php");
-        
+
         exit;
     } else {
         ?>
@@ -53,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
+            <a href="create.php">Or Create an account </a>
         </body>
 
         </html>
@@ -77,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
+        <a href="create.php">Or Create an account </a>
     </body>
 
     </html>

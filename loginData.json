@@ -1,7 +1,7 @@
 [
     {
         "username": "dani",
-        "password": "123"
+        "password": "$2y$10$zyPtj1k8VmFlV6cJ3hoDF.b.esSWnLVMDBRuj/9WV6dlSGk5ZOHPq"
     },
     {
         "username": "da",
@@ -39,4 +39,6 @@
         "username": "samantha_adams",
         "password": "Ad@msPassw0rd"
     }
-]
+,
+{"username":"wasd","password":"$2y$10$I36pMTwraMzSdogU5JiPsOjpMXPSZ\/5lIiEkEp2Sh\/aorQiTBWHnO"},
+{"username":"wasdd","password":"$2y$10$8hw8bBE2DEpsW\/dU5AHqf.Gd5IbpTR9kUlWVMH6d\/5lw\/GNVZItzG"}]
