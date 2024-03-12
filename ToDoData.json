@@ -1,0 +1,39 @@
+{
+    "users": [
+      {
+        "username": "dani",
+        "todos": [
+          {
+            "id": 1,
+            "title": "Finish homework",
+            "description": "Complete math assignment and submit it before 5 PM",
+            "due_date": "2024-03-15",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": 2,
+            "title": "Buy groceries",
+            "description": "Get eggs, milk, bread, and vegetables",
+            "due_date": "2024-03-14",
+            "priority": "medium",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "username": "de",
+        "todos": [
+          {
+            "id": 1,
+            "title": "Call mom",
+            "description": "Wish her a happy birthday",
+            "due_date": "2024-03-12",
+            "priority": "low",
+            "completed": true
+          }
+        ]
+      }
+    ]
+  }
+  

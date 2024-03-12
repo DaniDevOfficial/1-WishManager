@@ -27,10 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // are we at the end of is the file empty
             if (ftell($handle) > 0) {
-                // move back a byte
                 fseek($handle, -1, SEEK_END);
                 fwrite($handle, ',', 1); // add the trailing comma
-                fwrite($handle, PHP_EOL . json_encode($newAccountData) . ']'); // add the new json string
+                fwrite($handle, PHP_EOL . json_encode($newAccountData) . PHP_EOL . ']'); // add the new json string
             } else {
                 // write the first event inside an array
                 fwrite($handle, json_encode(array($newAccountData)));
